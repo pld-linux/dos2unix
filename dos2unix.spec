@@ -7,7 +7,7 @@ Summary(uk):	dos2unix - конвертор текстових файл╕в DOS в формат UNIX
 Summary(zh_CN):	в╙╩╩DOS╩РMACнд╠╬нд╪Ч╣╫UNIX╦Яй╫
 Name:		dos2unix
 Version:	3.1
-Release:	14
+Release:	15
 License:	Freer than LGPL
 Group:		Applications/Text
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/text/%{name}-%{version}.tar.bz2
