@@ -11,6 +11,7 @@ Release:	14
 License:	Freer than LGPL
 Group:		Applications/Text
 Source0:	ftp://sunsite.unc.edu//pub/Linux/utils/text/%{name}-%{version}.tar.bz2
+# Source0-md5:	f90026a397cf787083ec2e4892c6dcdd
 Patch0:		%{name}.patch
 Patch1:		%{name}-segfault.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
