@@ -1,11 +1,13 @@
 Summary:	dos2unix - DOS/MAC to UNIX text file format converter
+Summary(pl):	dos2unix - konwerter plików tekstowych z formatu DOS/MAC na UNIX
 Name:		dos2unix
 Version:	3.0
-Release:	1
+Release:	2
 Copyright:	Freer than LGPL
-Group:		Utilities/Text
+Group:		Applications/Text
+Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
-Group(pl):	Narzêdzia/Tekst
+Group(pl):	Aplikacje/Tekst
 Source0:	%{name}-%{version}.src.tar.gz
 Source1:	unix2dos-2.2.src.tar.gz
 Obsoletes:	unix2dos
@@ -13,7 +15,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 A utility that converts plain text files in DOS/MAC format to UNIX
-format.
+format and back.
+
+%description -l pl
+Zestaw narzêdzi do konwersji pliki tekstowych w formacie DOS/MAC na
+u¿ywany poprzez UNIXa oraz odwrotnie.
 
 %prep
 %setup -q -c -a1
