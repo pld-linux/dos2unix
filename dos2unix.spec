@@ -10,8 +10,8 @@ Version:	3.1
 Release:	15
 License:	Freer than LGPL
 Group:		Applications/Text
-Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/text/%{name}-%{version}.tar.bz2
-# Source0-md5:	f90026a397cf787083ec2e4892c6dcdd
+Source0:	http://www.go.dlr.de/linux/src/%{name}-%{version}.tar.gz
+# Source0-md5:	25ff56bab202de63ea6f6c211c416e96
 Patch0:		%{name}.patch
 Patch1:		%{name}-segfault.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
