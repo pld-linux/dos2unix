@@ -1,6 +1,6 @@
 Summary:	dos2unix - DOS/MAC to UNIX text file format converter
 Summary(fr):	Convertisseur de format de fichier texte
-Summary(pl):	dos2unix - konwerter plikСw tekstowych z formatu DOS/MAC na UNIX
+Summary(pl):	dos2unix - konwerter plikСw tekstowych z formatСw DOS/MAC na UNIX
 Summary(pt_BR):	Conversor de formatos de arquivos texto
 Summary(ru):	dos2unix - конвертор текстовых файлов DOS в формат UNIX
 Summary(uk):	dos2unix - конвертор текстових файл╕в DOS в формат UNIX
@@ -23,7 +23,7 @@ format.
 Dos2unix converti des fichier texte DOS ou MAC au format UNIX.
 
 %description -l pl
-Zestaw narzЙdzi do konwersji pliki tekstowych w formacie DOS/MAC na
+Zestaw narzЙdzi do konwersji plikСw tekstowych z formatСw DOS/MAC na
 format u©ywany przez UNIX-a.
 
 %description -l pt_BR
