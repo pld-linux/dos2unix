@@ -25,23 +25,23 @@ u¿ywany poprzez UNIXa oraz odwrotnie.
 %setup -q -c -a1
 
 %build
-gcc $RPM_OPT_FLAGS -o dos2unix dos2unix.c
-gcc $RPM_OPT_FLAGS -o unix2dos unix2dos.c
+%{__cc} %{rpmcflags} -o dos2unix dos2unix.c
+%{__cc} %{rpmcflags} -o unix2dos unix2dos.c
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install -s -m 755 dos2unix $RPM_BUILD_ROOT%{_bindir}
-install -s -m 755 unix2dos $RPM_BUILD_ROOT%{_bindir}
+install -m 755 dos2unix $RPM_BUILD_ROOT%{_bindir}
+install -m 755 unix2dos $RPM_BUILD_ROOT%{_bindir}
 install dos2unix.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install unix2dos.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-ln -s dos2unix $RPM_BUILD_ROOT%{_bindir}/mac2unix
+ln -sf dos2unix $RPM_BUILD_ROOT%{_bindir}/mac2unix
 
 echo ".so dos2unix.1" > $RPM_BUILD_ROOT%{_mandir}/man1/mac2unix.1
 
-gzip -9nf COPYRIGHT $RPM_BUILD_ROOT%{_mandir}/man1/*
+gzip -9nf COPYRIGHT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
