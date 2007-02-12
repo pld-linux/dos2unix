@@ -1,10 +1,10 @@
 Summary:	dos2unix - DOS/MAC to UNIX text file format converter
-Summary(fr.UTF-8):   Convertisseur de format de fichier texte
-Summary(pl.UTF-8):   dos2unix - konwerter plików tekstowych z formatów DOS/MAC na UNIX
-Summary(pt_BR.UTF-8):   Conversor de formatos de arquivos texto
-Summary(ru.UTF-8):   dos2unix - конвертор текстовых файлов DOS в формат UNIX
-Summary(uk.UTF-8):   dos2unix - конвертор текстових файлів DOS в формат UNIX
-Summary(zh_CN.UTF-8):   转换DOS或MAC文本文件到UNIX格式
+Summary(fr.UTF-8):	Convertisseur de format de fichier texte
+Summary(pl.UTF-8):	dos2unix - konwerter plików tekstowych z formatów DOS/MAC na UNIX
+Summary(pt_BR.UTF-8):	Conversor de formatos de arquivos texto
+Summary(ru.UTF-8):	dos2unix - конвертор текстовых файлов DOS в формат UNIX
+Summary(uk.UTF-8):	dos2unix - конвертор текстових файлів DOS в формат UNIX
+Summary(zh_CN.UTF-8):	转换DOS或MAC文本文件到UNIX格式
 Name:		dos2unix
 Version:	3.1
 Release:	15
