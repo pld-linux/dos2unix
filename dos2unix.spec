@@ -1,10 +1,10 @@
 Summary:	dos2unix - DOS/MAC to UNIX text file format converter
-Summary(fr):	Convertisseur de format de fichier texte
-Summary(pl):	dos2unix - konwerter plikСw tekstowych z formatСw DOS/MAC na UNIX
-Summary(pt_BR):	Conversor de formatos de arquivos texto
-Summary(ru):	dos2unix - конвертор текстовых файлов DOS в формат UNIX
-Summary(uk):	dos2unix - конвертор текстових файл╕в DOS в формат UNIX
-Summary(zh_CN):	в╙╩╩DOS╩РMACнд╠╬нд╪Ч╣╫UNIX╦Яй╫
+Summary(fr.UTF-8):   Convertisseur de format de fichier texte
+Summary(pl.UTF-8):   dos2unix - konwerter plikцЁw tekstowych z formatцЁw DOS/MAC na UNIX
+Summary(pt_BR.UTF-8):   Conversor de formatos de arquivos texto
+Summary(ru.UTF-8):   dos2unix - п╨п╬п╫п╡п╣я─я┌п╬я─ я┌п╣п╨я│я┌п╬п╡я▀я┘ я└п╟п╧п╩п╬п╡ DOS п╡ я└п╬я─п╪п╟я┌ UNIX
+Summary(uk.UTF-8):   dos2unix - п╨п╬п╫п╡п╣я─я┌п╬я─ я┌п╣п╨я│я┌п╬п╡п╦я┘ я└п╟п╧п╩я√п╡ DOS п╡ я└п╬я─п╪п╟я┌ UNIX
+Summary(zh_CN.UTF-8):   Х╫╛Ф█╒DOSФ┬√MACФ√┤Ф°╛Ф√┤Д╩╤Е┬╟UNIXФ═╪Е╪▐
 Name:		dos2unix
 Version:	3.1
 Release:	15
@@ -20,22 +20,22 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 A utility that converts plain text files in DOS/MAC format to UNIX
 format.
 
-%description -l fr
+%description -l fr.UTF-8
 Dos2unix converti des fichier texte DOS ou MAC au format UNIX.
 
-%description -l pl
-Zestaw narzЙdzi do konwersji plikСw tekstowych z formatСw DOS/MAC na
-format u©ywany przez UNIX-a.
+%description -l pl.UTF-8
+Zestaw narzд≥dzi do konwersji plikцЁw tekstowych z formatцЁw DOS/MAC na
+format uе╪ywany przez UNIX-a.
 
-%description -l pt_BR
+%description -l pt_BR.UTF-8
 O dos2unix converte arquivos texto do DOS e MAC para o formato texto
 do Unix.
 
-%description -l ru
-dos2unix - конвертор текстовых файлов DOS в формат UNIX.
+%description -l ru.UTF-8
+dos2unix - п╨п╬п╫п╡п╣я─я┌п╬я─ я┌п╣п╨я│я┌п╬п╡я▀я┘ я└п╟п╧п╩п╬п╡ DOS п╡ я└п╬я─п╪п╟я┌ UNIX.
 
-%description -l uk
-dos2unix - конвертор текстових файл╕в DOS в формат UNIX.
+%description -l uk.UTF-8
+dos2unix - п╨п╬п╫п╡п╣я─я┌п╬я─ я┌п╣п╨я│я┌п╬п╡п╦я┘ я└п╟п╧п╩я√п╡ DOS п╡ я└п╬я─п╪п╟я┌ UNIX.
 
 %prep
 %setup -q
