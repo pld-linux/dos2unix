@@ -7,13 +7,18 @@ Summary(uk.UTF-8):	dos2unix - конвертор текстових файлів
 Summary(zh_CN.UTF-8):	转换DOS或MAC文本文件到UNIX格式
 Name:		dos2unix
 Version:	3.1
-Release:	19
+Release:	20
 License:	Freer than LGPL
 Group:		Applications/Text
 Source0:	http://www.go.dlr.de/linux/src/%{name}-%{version}.tar.gz
 # Source0-md5:	25ff56bab202de63ea6f6c211c416e96
 Patch0:		%{name}.patch
 Patch1:		%{name}-segfault.patch
+Patch2:		%{name}-includes.patch
+Patch3:		%{name}-manpage-update.patch
+Patch4:		%{name}-preserve-file-modes.patch
+Patch5:		%{name}-safeconv.patch
+Patch6:		%{name}-workaround-rename-EXDEV.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -41,6 +46,11 @@ dos2unix - конвертор текстових файлів DOS в форма�
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+%patch3 -p1
+%patch4 -p1
+%patch5 -p1
+%patch6 -p1
 
 %build
 %{__cc} %{rpmcflags} -o dos2unix dos2unix.c
