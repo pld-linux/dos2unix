@@ -6,19 +6,17 @@ Summary(ru.UTF-8):	dos2unix - конвертор текстовых файлов
 Summary(uk.UTF-8):	dos2unix - конвертор текстових файлів DOS в формат UNIX
 Summary(zh_CN.UTF-8):	转换DOS或MAC文本文件到UNIX格式
 Name:		dos2unix
-Version:	3.1
-Release:	21
+Version:	5.1.1
+Release:	1
 License:	Freer than LGPL
 Group:		Applications/Text
-Source0:	http://www.go.dlr.de/linux/src/%{name}-%{version}.tar.gz
-# Source0-md5:	25ff56bab202de63ea6f6c211c416e96
-Patch0:		%{name}.patch
-Patch1:		%{name}-segfault.patch
+Source0:	http://www.xs4all.nl/~waterlan/dos2unix/%{name}-%{version}.tar.gz
+# Source0-md5:	b8f6d8109fc6decf412bc1e3959450c0
+URL:		http://www.xs4all.nl/~waterlan/dos2unix.html
 Patch2:		%{name}-includes.patch
 Patch3:		%{name}-manpage-update.patch
-Patch4:		%{name}-preserve-file-modes.patch
-Patch5:		%{name}-safeconv.patch
 Patch6:		%{name}-workaround-rename-EXDEV.patch
+Obsoletes:	unix2dos
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,33 +42,30 @@ dos2unix - конвертор текстових файлів DOS в форма�
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
 %patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
-%patch6 -p1
+#%patch3 -p1
+#%patch6 -p1
 
 %build
-%{__cc} %{rpmcflags} -o dos2unix dos2unix.c
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-install dos2unix $RPM_BUILD_ROOT%{_bindir}
-install dos2unix.1 $RPM_BUILD_ROOT%{_mandir}/man1
+%find_lang %{name} --all-name
 
-ln -sf dos2unix $RPM_BUILD_ROOT%{_bindir}/mac2unix
-
-echo ".so dos2unix.1" > $RPM_BUILD_ROOT%{_mandir}/man1/mac2unix.1
+find $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc COPYRIGHT
-%attr(755,root,root) %{_bindir}/*
+%doc COPYING.txt ChangeLog.txt NEWS.txt README.txt TODO.txt
+%attr(755,root,root) %{_bindir}/dos2unix
+%attr(755,root,root) %{_bindir}/mac2unix
+%attr(755,root,root) %{_bindir}/unix2dos
+%attr(755,root,root) %{_bindir}/unix2mac
 %{_mandir}/man1/*

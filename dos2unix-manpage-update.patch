@@ -7,8 +7,8 @@ isn't used in the following example.
 Patch by Bill Anderson
 https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=57507
 
---- dos2unix-3.1/dos2unix.1
-+++ dos2unix-3.1/dos2unix.1
+--- dos2unix-5.1.1/man/man1/dos2unix.1~
++++ dos2unix-5.1.1/man/man1/dos2unix.1
 @@ -4,127 +4,104 @@
  .SH NAME
  
