@@ -8,14 +8,13 @@ Summary(zh_CN.UTF-8):	转换DOS或MAC文本文件到UNIX格式
 Name:		dos2unix
 Version:	5.1.1
 Release:	1
-License:	Freer than LGPL
+License:	BSD
 Group:		Applications/Text
 Source0:	http://www.xs4all.nl/~waterlan/dos2unix/%{name}-%{version}.tar.gz
 # Source0-md5:	b8f6d8109fc6decf412bc1e3959450c0
+Patch0:		%{name}-includes.patch
 URL:		http://www.xs4all.nl/~waterlan/dos2unix.html
-Patch2:		%{name}-includes.patch
-Patch3:		%{name}-manpage-update.patch
-Patch6:		%{name}-workaround-rename-EXDEV.patch
+Provides:	unix2dos
 Obsoletes:	unix2dos
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,21 +41,22 @@ dos2unix - конвертор текстових файлів DOS в форма�
 
 %prep
 %setup -q
-%patch2 -p1
-#%patch3 -p1
-#%patch6 -p1
+%patch0 -p1
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	RPM_OPT_FLAGS="%{rpmcflags} %{rpmcppflags}" \
+	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# dos2unix and unix2dos domains
 %find_lang %{name} --all-name
-
-find $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -68,4 +68,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/mac2unix
 %attr(755,root,root) %{_bindir}/unix2dos
 %attr(755,root,root) %{_bindir}/unix2mac
-%{_mandir}/man1/*
+%{_mandir}/man1/dos2unix.1*
+%{_mandir}/man1/mac2unix.1*
+%{_mandir}/man1/unix2dos.1*
+%{_mandir}/man1/unix2mac.1*
+%lang(nl) %{_mandir}/nl/man1/dos2unix.1*
+%lang(nl) %{_mandir}/nl/man1/mac2unix.1*
+%lang(nl) %{_mandir}/nl/man1/unix2dos.1*
+%lang(nl) %{_mandir}/nl/man1/unix2mac.1*
