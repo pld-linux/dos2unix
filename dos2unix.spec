@@ -55,6 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# some transliterated(?) variant of eo
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/eo-x
+
 # dos2unix and unix2dos domains
 %find_lang %{name} --all-name
 
