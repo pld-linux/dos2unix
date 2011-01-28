@@ -14,6 +14,7 @@ Source0:	http://www.xs4all.nl/~waterlan/dos2unix/%{name}-%{version}.tar.gz
 # Source0-md5:	b8f6d8109fc6decf412bc1e3959450c0
 Patch0:		%{name}-includes.patch
 URL:		http://www.xs4all.nl/~waterlan/dos2unix.html
+BuildRequires:	gettext-devel
 Provides:	unix2dos
 Obsoletes:	unix2dos
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
