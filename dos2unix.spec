@@ -6,12 +6,12 @@ Summary(ru.UTF-8):	dos2unix - конвертор текстовых файлов
 Summary(uk.UTF-8):	dos2unix - конвертор текстових файлів DOS в формат UNIX
 Summary(zh_CN.UTF-8):	转换DOS或MAC文本文件到UNIX格式
 Name:		dos2unix
-Version:	5.2.1
+Version:	5.3
 Release:	1
 License:	BSD
 Group:		Applications/Text
 Source0:	http://www.xs4all.nl/~waterlan/dos2unix/%{name}-%{version}.tar.gz
-# Source0-md5:	478fdd55a155ef8c8710dd1360383a71
+# Source0-md5:	0db30704f5b68c5a0aeaff9b8d7012e8
 Patch0:		%{name}-includes.patch
 URL:		http://www.xs4all.nl/~waterlan/dos2unix.html
 BuildRequires:	gettext-devel
