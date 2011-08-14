@@ -6,15 +6,15 @@ Summary(ru.UTF-8):	dos2unix - конвертор текстовых файлов
 Summary(uk.UTF-8):	dos2unix - конвертор текстових файлів DOS в формат UNIX
 Summary(zh_CN.UTF-8):	转换DOS或MAC文本文件到UNIX格式
 Name:		dos2unix
-Version:	5.3
+Version:	5.3.1
 Release:	1
 License:	BSD
 Group:		Applications/Text
 Source0:	http://www.xs4all.nl/~waterlan/dos2unix/%{name}-%{version}.tar.gz
-# Source0-md5:	0db30704f5b68c5a0aeaff9b8d7012e8
-Patch0:		%{name}-includes.patch
+# Source0-md5:	438c48ebd6891b80b58de14c022ca69e
 URL:		http://www.xs4all.nl/~waterlan/dos2unix.html
 BuildRequires:	gettext-devel
+BuildRequires:	perl-tools-pod
 Provides:	unix2dos
 Obsoletes:	unix2dos
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,7 +42,6 @@ dos2unix - конвертор текстових файлів DOS в форма�
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__make} \
@@ -73,6 +72,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/mac2unix.1*
 %{_mandir}/man1/unix2dos.1*
 %{_mandir}/man1/unix2mac.1*
+%lang(es) %{_mandir}/es/man1/dos2unix.1*
+%lang(es) %{_mandir}/es/man1/mac2unix.1*
+%lang(es) %{_mandir}/es/man1/unix2dos.1*
+%lang(es) %{_mandir}/es/man1/unix2mac.1*
 %lang(nl) %{_mandir}/nl/man1/dos2unix.1*
 %lang(nl) %{_mandir}/nl/man1/mac2unix.1*
 %lang(nl) %{_mandir}/nl/man1/unix2dos.1*
