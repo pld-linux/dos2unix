@@ -6,12 +6,12 @@ Summary(ru.UTF-8):	dos2unix - конвертор текстовых файлов
 Summary(uk.UTF-8):	dos2unix - конвертор текстових файлів DOS в формат UNIX
 Summary(zh_CN.UTF-8):	转换DOS或MAC文本文件到UNIX格式
 Name:		dos2unix
-Version:	6.0.4
+Version:	6.0.5
 Release:	1
 License:	BSD
 Group:		Applications/Text
 Source0:	http://waterlan.home.xs4all.nl/dos2unix/%{name}-%{version}.tar.gz
-# Source0-md5:	f1fff9d70f9ba644c038677ba1d94ac0
+# Source0-md5:	e5b06dae8c11b6818fff9cf707b6490f
 URL:		http://waterlan.home.xs4all.nl/dos2unix.html
 BuildRequires:	gettext-devel
 BuildRequires:	perl-tools-pod
@@ -75,11 +75,31 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/mac2unix.1*
 %{_mandir}/man1/unix2dos.1*
 %{_mandir}/man1/unix2mac.1*
+%lang(de) %{_mandir}/de/man1/dos2unix.1*
+%lang(de) %{_mandir}/de/man1/mac2unix.1*
+%lang(de) %{_mandir}/de/man1/unix2dos.1*
+%lang(de) %{_mandir}/de/man1/unix2mac.1*
 %lang(es) %{_mandir}/es/man1/dos2unix.1*
 %lang(es) %{_mandir}/es/man1/mac2unix.1*
 %lang(es) %{_mandir}/es/man1/unix2dos.1*
 %lang(es) %{_mandir}/es/man1/unix2mac.1*
+%lang(fr) %{_mandir}/fr/man1/dos2unix.1*
+%lang(fr) %{_mandir}/fr/man1/mac2unix.1*
+%lang(fr) %{_mandir}/fr/man1/unix2dos.1*
+%lang(fr) %{_mandir}/fr/man1/unix2mac.1*
 %lang(nl) %{_mandir}/nl/man1/dos2unix.1*
 %lang(nl) %{_mandir}/nl/man1/mac2unix.1*
 %lang(nl) %{_mandir}/nl/man1/unix2dos.1*
 %lang(nl) %{_mandir}/nl/man1/unix2mac.1*
+%lang(pl) %{_mandir}/pl/man1/dos2unix.1*
+%lang(pl) %{_mandir}/pl/man1/mac2unix.1*
+%lang(pl) %{_mandir}/pl/man1/unix2dos.1*
+%lang(pl) %{_mandir}/pl/man1/unix2mac.1*
+%lang(pt_BR) %{_mandir}/pt_BR/man1/dos2unix.1*
+%lang(pt_BR) %{_mandir}/pt_BR/man1/mac2unix.1*
+%lang(pt_BR) %{_mandir}/pt_BR/man1/unix2dos.1*
+%lang(pt_BR) %{_mandir}/pt_BR/man1/unix2mac.1*
+%lang(uk) %{_mandir}/uk/man1/dos2unix.1*
+%lang(uk) %{_mandir}/uk/man1/mac2unix.1*
+%lang(uk) %{_mandir}/uk/man1/unix2dos.1*
+%lang(uk) %{_mandir}/uk/man1/unix2mac.1*
