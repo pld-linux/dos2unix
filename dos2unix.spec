@@ -13,7 +13,7 @@ Group:		Applications/Text
 Source0:	http://waterlan.home.xs4all.nl/dos2unix/%{name}-%{version}.tar.gz
 # Source0-md5:	7abcb86ef1cfac629448a86d3d7b3a52
 URL:		http://waterlan.home.xs4all.nl/dos2unix.html
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	perl-tools-pod
 Provides:	unix2dos
 Obsoletes:	unix2dos
