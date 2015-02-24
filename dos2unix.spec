@@ -7,7 +7,7 @@ Summary(uk.UTF-8):	dos2unix - конвертор текстових файлів
 Summary(zh_CN.UTF-8):	转换DOS或MAC文本文件到UNIX格式
 Name:		dos2unix
 Version:	7.0
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications/Text
 Source0:	http://waterlan.home.xs4all.nl/dos2unix/%{name}-%{version}.tar.gz
