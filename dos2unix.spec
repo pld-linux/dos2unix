@@ -6,12 +6,12 @@ Summary(ru.UTF-8):	dos2unix - конвертор текстовых файлов
 Summary(uk.UTF-8):	dos2unix - конвертор текстових файлів DOS в формат UNIX
 Summary(zh_CN.UTF-8):	转换DOS或MAC文本文件到UNIX格式
 Name:		dos2unix
-Version:	7.4.2
+Version:	7.4.3
 Release:	1
 License:	BSD
 Group:		Applications/Text
 Source0:	http://waterlan.home.xs4all.nl/dos2unix/%{name}-%{version}.tar.gz
-# Source0-md5:	4e8f8c230a72753b307fab69f8121ba4
+# Source0-md5:	ff949538cf3c82910d5f6f486c1981dd
 URL:		http://waterlan.home.xs4all.nl/dos2unix.html
 BuildRequires:	gettext-tools
 BuildRequires:	perl-tools-pod
@@ -99,6 +99,10 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pt_BR) %{_mandir}/pt_BR/man1/mac2unix.1*
 %lang(pt_BR) %{_mandir}/pt_BR/man1/unix2dos.1*
 %lang(pt_BR) %{_mandir}/pt_BR/man1/unix2mac.1*
+%lang(sr) %{_mandir}/sr/man1/dos2unix.1*
+%lang(sr) %{_mandir}/sr/man1/mac2unix.1*
+%lang(sr) %{_mandir}/sr/man1/unix2dos.1*
+%lang(sr) %{_mandir}/sr/man1/unix2mac.1*
 %lang(sv) %{_mandir}/sv/man1/dos2unix.1*
 %lang(sv) %{_mandir}/sv/man1/mac2unix.1*
 %lang(sv) %{_mandir}/sv/man1/unix2dos.1*
