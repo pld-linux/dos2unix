@@ -6,12 +6,12 @@ Summary(ru.UTF-8):	dos2unix - конвертор текстовых файлов
 Summary(uk.UTF-8):	dos2unix - конвертор текстових файлів DOS в формат UNIX
 Summary(zh_CN.UTF-8):	转换DOS或MAC文本文件到UNIX格式
 Name:		dos2unix
-Version:	7.4.3
+Version:	7.4.4
 Release:	1
 License:	BSD
 Group:		Applications/Text
 Source0:	http://waterlan.home.xs4all.nl/dos2unix/%{name}-%{version}.tar.gz
-# Source0-md5:	ff949538cf3c82910d5f6f486c1981dd
+# Source0-md5:	6ac049a4eb878bbc57019f731a28f7b5
 URL:		http://waterlan.home.xs4all.nl/dos2unix.html
 BuildRequires:	gettext-tools
 BuildRequires:	perl-tools-pod
@@ -87,6 +87,10 @@ rm -rf $RPM_BUILD_ROOT
 %lang(fr) %{_mandir}/fr/man1/mac2unix.1*
 %lang(fr) %{_mandir}/fr/man1/unix2dos.1*
 %lang(fr) %{_mandir}/fr/man1/unix2mac.1*
+%lang(ko) %{_mandir}/ko/man1/dos2unix.1*
+%lang(ko) %{_mandir}/ko/man1/mac2unix.1*
+%lang(ko) %{_mandir}/ko/man1/unix2dos.1*
+%lang(ko) %{_mandir}/ko/man1/unix2mac.1*
 %lang(nl) %{_mandir}/nl/man1/dos2unix.1*
 %lang(nl) %{_mandir}/nl/man1/mac2unix.1*
 %lang(nl) %{_mandir}/nl/man1/unix2dos.1*
@@ -99,6 +103,10 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pt_BR) %{_mandir}/pt_BR/man1/mac2unix.1*
 %lang(pt_BR) %{_mandir}/pt_BR/man1/unix2dos.1*
 %lang(pt_BR) %{_mandir}/pt_BR/man1/unix2mac.1*
+%lang(ro) %{_mandir}/ro/man1/dos2unix.1*
+%lang(ro) %{_mandir}/ro/man1/mac2unix.1*
+%lang(ro) %{_mandir}/ro/man1/unix2dos.1*
+%lang(ro) %{_mandir}/ro/man1/unix2mac.1*
 %lang(sr) %{_mandir}/sr/man1/dos2unix.1*
 %lang(sr) %{_mandir}/sr/man1/mac2unix.1*
 %lang(sr) %{_mandir}/sr/man1/unix2dos.1*
