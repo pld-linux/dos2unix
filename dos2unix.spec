@@ -10,9 +10,9 @@ Version:	7.5.0
 Release:	1
 License:	BSD
 Group:		Applications/Text
-Source0:	http://waterlan.home.xs4all.nl/dos2unix/%{name}-%{version}.tar.gz
+Source0:	https://waterlan.home.xs4all.nl/dos2unix/%{name}-%{version}.tar.gz
 # Source0-md5:	001af2b16ae216241ac08bef29f36c28
-URL:		http://waterlan.home.xs4all.nl/dos2unix.html
+URL:		https://waterlan.home.xs4all.nl/dos2unix.html
 BuildRequires:	gettext-tools
 BuildRequires:	perl-tools-pod
 Provides:	unix2dos
